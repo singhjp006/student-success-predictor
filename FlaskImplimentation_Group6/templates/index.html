@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="testbox">
+
+        <form action="/submit", method="post">
+
+            <div class="banner">
+                <div class="bancnt"> 
+                    <h2>Full-Stack Intelligent Application using Neural Networks</h2>
+                    <p class="bantext">Here, User has to enter input values for the fatures, and our App will give the prediction of student success in the program (program completion).</p>
+                </div>
+            </div>
+
+            <div class="Grid">
+                <div class="Grid-item">
+                    <p class="bantext">A friendly UI that allows users and administrators to use/administer the system</p>
+                </div>
+                <div class="Grid-item">
+                    <p class="bantext">
+                        Structured and/or unstructured data access API
+                    </p>
+                </div>
+                <div class="Grid-item">
+                    <p class="bantext">
+                        A modern backend API to perform classification/prediction tasks
+                    </p>
+                </div>
+              </div>
+
+            <div class="item">
+                <p>INTAKE TERM CODE</p>
+                <div class="name-item">
+                <input type="number" id="intaketermcode" name="intaketermcode" placeholder="e.g. 200609, 200701" />
+                </div>
+            </div>
+
+            <div class="item">
+                <p>INTAKE COLLEGE EXPERIENCE</p>
+                <select id="intakecollegeexprience" name="intakecollegeexprience">
+                    <option value="New to College">New to College</option>
+                    <option value="Enrolled">Enrolled</option>
+                    <option value="CE Enrolled">CE Enrolled</option>
+                    <option value="Prep Program Enrolled">Prep Program Enrolled</option>
+                    <option value="Prep Program Graduate">Prep Program Graduate</option>
+                    <option value="Graduate">Graduate</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <p>SCHOOL CODE</p>
+                <input type="text" name="schoolcode" id="schoolcode" placeholder="e.g. AS, CH, BU"/>
+            </div>
+
+            
+
+            <div class="item">
+                <p>PROGRAM LONG NAME</p>
+                <input type="text" name="programlongname" id="programlongname" placeholder="e.g. General Arts and Science - One Year, Paramedic"/>
+            </div>
+
+            <div class="item">
+                <p>PROGRAM SEMESTERS</p>
+                <select id="progsem" name="progsem">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>    
+                </select>
+            </div>
+
+            <div class="item">
+                <p>STUDENT LEVEL NAME</p>
+                <select id="studenrlvlname" name="studenrlvlname">
+                    <option value="Post Secondary">Post Secondary</option>
+                    <option value="Post Diploma">Post Diploma</option> 
+                </select>
+            </div>
+
+            <div class="item">
+                <p>TIME STATUS NAME</p>
+                <select id="timestatusname" name="timestatusname">
+                    <option value="Full-Time">Full-Time</option>
+                    <option value="Part-Time">Part-Time</option> 
+                </select>
+            </div>
+
+            <div class="item">
+                <p>RESIDENCY STATUS NAME</p>
+                <select id="residency" name="residency">
+                    <option value="Resident">Resident</option>
+                    <option value="Non-Resident">Non-Resident</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <p>FUNDING SOURCE NAME</p>
+                <select id="funsrcname" name="funsrcname">
+                    <option value="GPOG - FT">GPOG - FT</option>
+                    <option value="Second Career Program">Second Career Program</option>
+                    <option value="Apprentice - PS">Apprentice - PS</option>
+                    <option value="Apprentice - PS">Intl - Regular</option>
+                </select>
+            </div>
+
+
+            <div class="item">
+                <p>MAILING CITY NAME </p>
+                <input type="text" name="mailcityname" id="mailcityname" placeholder="e.g. East York, Toronto"/>
+            </div>
+
+
+            <div class="item">
+                <p>MAILING POSTAL CODE GROUP 3</p>
+                <input type="text" name="mailpostcode3" id="mailpostcode3" placeholder="e.g. M4B, M3A, M1J"/>
+            </div>
+
+            <!-- <div class="item">
+                <p>MAILING POSTAL CODE</p>
+                <input type="text" name="mailpostcode" id="mailpostcode" placeholder="e.g. M4B 2G1, M3A 1T4, M1J 2G8"/>
+            </div> -->
+
+            
+
+            <div class="item">
+                <p>MAILING PROVINCE NAME</p>
+                <input type="text" name="mailprovname" id="mailprovname" placeholder="e.g. Ontario, British Columbia"/>
+            </div>
+
+            <div class="item">
+                <p>GENDER</p>
+                <select id="gen" name="gen">
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <p>DISABILITY IND </p>
+                <select id="dis" name="dis">
+                    <option value="Y">Y</option>
+                    <option value="N">N</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <p>MAILING COUNTRY NAME</p>
+                <input type="text" name="mailcntname" id="mailcntname" placeholder="e.g. Canada, Kazakhstan"/>
+            </div>
+
+            <div class="item">
+                <p>CURRENT STAY STATUS</p>
+                <input type="text" name="staystatus" id="staystatus" placeholder="e.g Left College - Enrolled 3 Terms, Graduated - On Time"/>
+            </div>
+
+            <div class="item">
+                <p>FUTURE TERM ENROL</p>
+                <input type="text" name="termenrol" id="termenrol" placeholder="e.g. 1-0-0-0-0-0-0-0-0-0, 1-1-0-1-1-0-0-0-0-0"/>
+            </div>
+
+
+            <div class="item">
+                <p>ACADEMIC PERFORMANCE</p>
+                <select id="acaper" name="acaper">
+                    <option value="ZZ - Unknown">ZZ - Unknown</option>
+                    <option value="C - Satisfactory">C - Satisfactory</option>
+                    <option value="DF - Poor">DF - Poor</option>
+                    <option value="AB - Good">AB - Good</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <p>EXPECTED GRAD TERM CODE</p>
+                <input type="number" name="exgrade" id="exgrade" placeholder="e.g. 200705, 200805, 201009"/>
+            </div>
+
+            <div class="item">
+                <p>SUCCESS LEVEL</p>
+                <select id="suclvl" name="suclvl">
+                    <option value="Successful">Successful</option>
+                    <option value="Unsuccessful">Unsuccessful</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <p>FIRST YEAR PERSISTENCE COUNT</p>
+                <select id="percount" name="percount">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+
+
+            <div class="item">
+                <p>AGE GROUP LONG NAME</p>
+                <select id="agegrp" name="agegrp">
+                    <option value="0 to 18">0 to 18</option>
+                    <option value="19 to 20">19 to 20</option>
+                    <option value="21 to 25">21 to 25</option>
+                    <option value="26 to 30">26 to 30</option>
+                    <option value="31 to 35">31 to 35</option>
+                    <option value="36 to 40">36 to 40</option>
+                    <option value="41 to 50">41 to 50</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <p>APPLICANT CATEGORY NAME</p>
+                <select id="catname" name="catname">
+                    <option value="High School, Domestic">High School, Domestic</option>
+                    <option value="Mature: Domestic  With Post Secondary">Mature: Domestic  With Post Secondary</option>
+                    <option value="Mature: Domestic 19 or older No Academic History">Mature: Domestic 19 or older No Academic History</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <p>APPLICANT TARGET SEGMENT NAME</p>
+                <select id="tarsegname" name="tarsegname">
+                    <option value="Direct Entry">Direct Entry</option>
+                    <option value="Non-Direct Entry">Non-Direct Entry</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <p>PREV EDU CRED LEVEL NAME</p>
+                <select id="edulvlname" name="edulvlname">
+                    <option value="High School">High School</option>
+                    <option value="Post Secondary">Post Secondary</option>
+                    <option value="Unclassified">Unclassified</option>
+                </select>
+            </div>
+          
+
+
+            <div class="btn-block">
+                <input type="submit" value="Submit">
+            </div>
+
+            
+
+            
+        </form>
+        </div>
+
+    
+
+</body>
+</html>
